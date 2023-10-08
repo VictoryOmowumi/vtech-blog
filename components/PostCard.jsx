@@ -6,12 +6,12 @@ import { vtechImageLoader} from '@/utils'
 const PostCard = ({post, key}) => {
   
   return (
-    <div key={key} className='bg-white shadow-md rounded-md p-0 lg:p-8 pb-12 mb-8'>
+    <div key={key} className='bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8'>
        <div className="relative overflow-hidden shadow-md pb-80 mb-6">
         <img
           src={post.featuredImage.url}
           alt={post.title}
-          className='absolute top-0 left-0 w-full h-full object-cover obj'
+          className='object-top absolute top-0 left-0 w-full h-full object-cover rounded-t-lg shadow-lg '
         />
        </div>
        <h1 className="transition duration-700 text-center mb-8 cursor-pointer hover:text-pink-600 text-3xl font-semibold">

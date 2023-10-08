@@ -14,6 +14,7 @@ export default function Home() {
 
     fetchData();
   }, []);
+  console.log(posts) 
   return (
     <main className="container mx-auto px-10 mb-8 ">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
@@ -22,7 +23,7 @@ export default function Home() {
         </div>
       <div className="lg:col-span-4 col-span-1">
          <div className="lg:sticky relative top-8">
-        <PostWidget />
+        <PostWidget slug={posts.slug} categories={posts.categories} />
         <Categories />
          </div>
       </div>
@@ -30,3 +31,4 @@ export default function Home() {
     </main>
   )
 }
+
