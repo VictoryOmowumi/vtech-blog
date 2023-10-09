@@ -1,21 +1,19 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-
-const categories = [
-  { name: 'Web Development', slug: 'web-development' },
-  { name: 'Design & Illustration', slug: 'design-ui-ux' },
-  { name: 'Graphics & UI/UX', slug: 'graphics-illustrations' },
-  { name: 'Photography', slug: 'photography' },
-  { name: 'Mobile Development', slug: 'mobile-development' },
-];
-
+import { getCategories } from '@/services';
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
+  const [categories, setCategories] = useState([])
+
+  useEffect(() => {
+      getCategories().then((result) => setCategories(result))
+  }, [])
+
 
   return (
     <div className='container mx-auto px-4 sm:px-6 lg:px-8 mb-8'>

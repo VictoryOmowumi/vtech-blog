@@ -11,10 +11,10 @@ const PostCard = ({post, key}) => {
         <img
           src={post.featuredImage.url}
           alt={post.title}
-          className='object-top absolute top-0 left-0 w-full h-full object-cover rounded-t-lg shadow-lg '
+          className=' absolute top-0 left-0 w-full h-full object-cover rounded-t-lg shadow-lg '
         />
        </div>
-       <h1 className="transition duration-700 text-center mb-8 cursor-pointer hover:text-pink-600 text-3xl font-semibold">
+       <h1 className="transition duration-700 text-center mb-6 cursor-pointer hover:text-pink-600 text-2xl font-semibold">
       <Link href={`/post/${post.slug}`}>{post.title}</Link>
     </h1>
     <div className="block lg:flex text-center items-center justify-center mb-8 w-full">

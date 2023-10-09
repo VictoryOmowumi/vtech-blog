@@ -1,4 +1,25 @@
-export {default as PostCard} from './PostCard';
-export {default as Categories} from './Categories';
-export {default as PostWidget} from './PostWidget';
-export {default as Header} from './Header';
+import PostCard from "./PostCard";
+import Header from "./Header";
+import Categories from "./Categories";
+import PostDetail from "./PostDetail";
+import Author from "./Author";
+import AdjacentPostCard from "./AdjacentPostCard";
+import CommentsForm from "./CommentsForm";
+import Comments from "./Comments";
+import FeaturedPost from "./FeaturedPost";
+import PostWidget from "./PostWidget";
+import Loader from "./Loader";
+
+export {
+    PostCard,
+    Categories,
+    PostDetail,
+    Author,
+    AdjacentPostCard,
+    CommentsForm,
+    Comments,
+    FeaturedPost,
+    PostWidget,
+    Loader,
+    Header
+    };
