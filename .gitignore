@@ -26,6 +26,13 @@ yarn-error.log*
 
 # local env files
 .env*.local
+# the .env file is loaded in all cases except when NODE_ENV is production
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+
 
 # vercel
 .vercel
